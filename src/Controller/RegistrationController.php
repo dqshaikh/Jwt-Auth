@@ -94,13 +94,12 @@ class RegistrationController extends AbstractFOSRestController
         );
         $user->setName($name);
         $value = ["ROLE_USER"];
-        //$roles = json_encode($value,true);
         $user->setRoles((array)$value);
 
         $this->entityManager->persist($user);
         $this->entityManager->flush();
         $res = array("message"=>"Register successful");
         return new Response(json_encode($res));
-        //return $this->view($user, Response::HTTP_CREATED)->setContext((new Context())->setGroups(['public']));
     }
+
 }

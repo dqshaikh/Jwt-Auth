@@ -26,9 +26,15 @@ Install and build dependencies through composer
 Update env file to update the Database Configuration
 - `DATABASE_URL="[mysql]://[user]:[password]@[127.0.0.1]:[3306]/[databasename]?serverVersion=[8]&charset=[utf8mb4]"`
 
+Update hostname in env file
+- `APP_FOLDER=[http://localhost/Jwt-auth/]`
+
 Run Migration to create datasets
 - `php bin/console doctrine:database:create`
 - `php bin/console doctrine:migrations:migrate`
+
+Run fixture to load faker library data in user and posts table (It will instert 10k records)
+- `php bin/console doctrine:fixtures:load`
 
 Start the Server
 - `symfony server:start`
