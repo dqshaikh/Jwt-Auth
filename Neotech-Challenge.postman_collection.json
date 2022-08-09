@@ -1,0 +1,110 @@
+{
+	"id": "31e198b0-a356-f1f8-d0de-6e3b7c57f270",
+	"name": "Neotech-Challenge",
+	"description": "",
+	"order": [
+		"1ddf9eaf-9d9e-f315-3ce7-312fc6ebef20",
+		"5608e741-ade2-ad31-3b89-a20f14c9d454",
+		"a2a0a046-a9ba-c5ea-cbac-5f24c7436fd8"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1660072239605,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "1ddf9eaf-9d9e-f315-3ce7-312fc6ebef20",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/register",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "31e198b0-a356-f1f8-d0de-6e3b7c57f270",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Register",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1660072259955,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\"email\": \"admin@gmail.com\", \"password\": \"Admin@123\",\"name\":\"testname\"}\n"
+		},
+		{
+			"id": "5608e741-ade2-ad31-3b89-a20f14c9d454",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NjAwNjk1MzQsImV4cCI6MTY2MDA3MzEzNCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIn0.XZK9XuvURVPeWHhnDlXDkfMD1qwBwIypjxemIrkTZY3YjURz4Gg3o8TRathRV6UWCZQk4WS9JjdKykVcTmfNGGm14gUOiU9IyQZ8e__EqBOsW7r9umbJoDT_EzoPExdPCCYMHucJQ_QKPNPq7nHFSMcwNDkBA0MI5oTTUJ0pP2oJXoWQEm-j2fu0KM03BkukbD96ooHkTQh_oAcytDPuOYclSOQuy5qybvBcA-X0yXqa6agOiVM-IxKEkcTGOBsBR5gP_tXbDo8J8pX7hw5-KpiqnIl8CKVPE-f_jHFKLMiNqmfXh2ujM0GXKHUfJfcWc4TmutWOwEc1O_YIaZi5avSKwsPvnySnFmGbGLe-io--V-gZ5GRdZ2eWiirPudcgz0c8em8DnELVNHNBhiLTkm0IoemExATim9v3gzXhgZmhhBoDxAiV_O2eNpmDVVm9G5-xfzVmo8HVrtq5b9XYZwmLDh6gsNm1aWqqgPcsKjd8baVGgRjj57qSYJip0owMUH2FXEuuUGRgnM1dfa_N1qRTzjZlFY4hu_H8wqL2Lw6VH_RmuVSyqiT_gtK2PNxpfl-8PTm5yr3KY5jykGaD_l8vEXz19UxPpqlTRE02otbB5cXygrjsZCIehO0UXfkrGzPxLT1V4qirPI1D3VfdHzSDykyAvCpTonmwQwKrLZ4\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NjAwNjk1MzQsImV4cCI6MTY2MDA3MzEzNCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIn0.XZK9XuvURVPeWHhnDlXDkfMD1qwBwIypjxemIrkTZY3YjURz4Gg3o8TRathRV6UWCZQk4WS9JjdKykVcTmfNGGm14gUOiU9IyQZ8e__EqBOsW7r9umbJoDT_EzoPExdPCCYMHucJQ_QKPNPq7nHFSMcwNDkBA0MI5oTTUJ0pP2oJXoWQEm-j2fu0KM03BkukbD96ooHkTQh_oAcytDPuOYclSOQuy5qybvBcA-X0yXqa6agOiVM-IxKEkcTGOBsBR5gP_tXbDo8J8pX7hw5-KpiqnIl8CKVPE-f_jHFKLMiNqmfXh2ujM0GXKHUfJfcWc4TmutWOwEc1O_YIaZi5avSKwsPvnySnFmGbGLe-io--V-gZ5GRdZ2eWiirPudcgz0c8em8DnELVNHNBhiLTkm0IoemExATim9v3gzXhgZmhhBoDxAiV_O2eNpmDVVm9G5-xfzVmo8HVrtq5b9XYZwmLDh6gsNm1aWqqgPcsKjd8baVGgRjj57qSYJip0owMUH2FXEuuUGRgnM1dfa_N1qRTzjZlFY4hu_H8wqL2Lw6VH_RmuVSyqiT_gtK2PNxpfl-8PTm5yr3KY5jykGaD_l8vEXz19UxPpqlTRE02otbB5cXygrjsZCIehO0UXfkrGzPxLT1V4qirPI1D3VfdHzSDykyAvCpTonmwQwKrLZ4",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/posts",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "31e198b0-a356-f1f8-d0de-6e3b7c57f270",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Posts",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1660072276827,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\"email\": \"admin@gmail.com\", \"password\": \"Aamir@123\",\"confirmPassword\":\"Aamir@123\"}"
+		},
+		{
+			"id": "a2a0a046-a9ba-c5ea-cbac-5f24c7436fd8",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/login",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "31e198b0-a356-f1f8-d0de-6e3b7c57f270",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Login",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1660072300155,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\"username\": \"admin@gmail.com\", \"password\": \"Admin@123\"}"
+		}
+	]
+}
