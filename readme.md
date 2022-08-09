@@ -28,17 +28,17 @@ GET http://127.0.0.1:8000/api/register?email=email&password=password&name=name
 
 #### Login - get access token
 POST http://127.0.0.1:8000/api/login_check
-{"username": "admin@gmail.com", "password": "123456"}
+- {"username": "admin@gmail.com", "password": "123456"}
 
 #### Add Post
 POST http://127.0.0.1:8000/api/addpost
-Set Header - Authorization: 'access token'
-{"title":"title","body":"body is","date":date}
+- Set Header - Authorization: 'access token'
+- {"title":"title","body":"body is","date":date}
 Date formate should be - ("YYYY/MM/DD", "DD/MM/YYYY","MM-DD-YYYY")
 
 #### Get User
 GET http://127.0.0.1:8000/api/post
-Set Header - Authorization: 'access token'
+- Set Header - Authorization: 'access token'
 
 Example
 Authorization: Bearer <access-token>
