@@ -75,8 +75,11 @@ class PostController extends AbstractController
             $title = $parameters['title'];
             $body = $parameters['body'];
             $date = date("Y-m-d", strtotime($parameters['date']));
-            $date = str_replace("-", "", $date);
-
+            if (!DateTime::createFromFormat('Y-m-d', $parameters['date'])) {
+                $date = date("Y-m-d", strtotime($parameters['date']));
+            } else {
+                $date = $parameters['date'];
+            }
 
             $post = new Posts();
 

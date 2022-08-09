@@ -33,7 +33,7 @@ POST http://127.0.0.1:8000/api/login_check
 #### Add Post
 POST http://127.0.0.1:8000/api/addpost
 - Set Header - Authorization: 'access token'
-- {"title":"title","body":"body is","date":date}
+- {"title":"title","body":"body","date":date}
 Date formate should be - ("YYYY/MM/DD", "DD/MM/YYYY","MM-DD-YYYY")
 
 #### Get User
