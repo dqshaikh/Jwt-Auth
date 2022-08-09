@@ -1,0 +1,20 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+
+api_login_check:
+    path: /api/login_check
+
+new_register:
+    path: /api/register
+
+posts:
+    path: /api/posts
+
+addpost:
+    path: /api/addpost
+
+lists:
+    resource  : App\Controller\PostController
+    prefix    : api
