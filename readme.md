@@ -24,19 +24,15 @@ if not configured symfony on your system use:
 ## Using
 
 #### SignUp
-GET http://127.0.0.1:8000/api/register?email=email&password=password&name=name
+POST http://127.0.0.1:8000/api/register
+- {"username": "admin@gmail.com", "password": "password","name":"name"}
+Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character
 
 #### Login - get access token
-POST http://127.0.0.1:8000/api/login_check
+POST http://127.0.0.1:8000/api/login
 - {"username": "admin@gmail.com", "password": "123456"}
 
-#### Add Post
-POST http://127.0.0.1:8000/api/addpost
-- Set Header - Authorization: 'access token'
-- {"title":"title","body":"body","date":date}
-Date formate should be - ("YYYY/MM/DD", "DD/MM/YYYY","MM-DD-YYYY")
-
-#### Get User
+#### Get Posts
 GET http://127.0.0.1:8000/api/post
 - Set Header - Authorization: 'access token'
 

@@ -38,24 +38,25 @@ class RegistrationController extends AbstractFOSRestController
     }
 
     /**
-     * @Route("/register", name="register")
+     * @Route("/register", name="register", methods="POST")
      * @param Request $request
      * @return \FOS\RestBundle\View\View
      */
     public function index(Request $request)
     {
-        if(!isset($_REQUEST['email']) || empty($_REQUEST['email'])){
+        $parameters = json_decode($request->getContent(), true);
+        if(!isset($parameters['email']) || empty($parameters['email'])){
             $res = array("message"=>"Email required");
             return new Response(json_encode($res));
 
         }
-        if(!isset($_REQUEST['password']) || empty($_REQUEST['password'])){
+        if(!isset($parameters['password']) || empty($parameters['password'])){
             $res = array("message"=>"Password required");
             return new Response(json_encode($res));
 
         } else {
             // Validate password strength
-            $password = $_REQUEST['password'];
+            $password = $parameters['password'];
             $uppercase = preg_match('@[A-Z]@', $password);
             $lowercase = preg_match('@[a-z]@', $password);
             $number    = preg_match('@[0-9]@', $password);
@@ -67,14 +68,14 @@ class RegistrationController extends AbstractFOSRestController
                 
             }
         }
-        if(!isset($_REQUEST['name']) || empty($_REQUEST['name'])){
+        if(!isset($parameters['name']) || empty($parameters['name'])){
             $res = array("message"=>"Name required");
             return new Response(json_encode($res));
 
         }
-        $email = $request->get('email');
-        $password = $request->get('password');
-        $name = $request->get('name');
+        $email = $parameters['email'];
+        $password = $parameters['password'];
+        $name = $parameters['name'];
 
         $user = $this->userRepository->findOneBy([
             'email' => $email,

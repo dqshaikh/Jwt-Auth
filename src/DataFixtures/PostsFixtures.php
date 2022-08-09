@@ -9,8 +9,11 @@ class PostsFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-        // $product = new Product();
-        // $manager->persist($product);
+         $post = new Posts();
+            $post->setTitle("Hello");
+            $post->setBody("Okkkk");
+            $post->setPublishDate("2020-08-07");
+         $manager->persist($post);
 
         $manager->flush();
     }

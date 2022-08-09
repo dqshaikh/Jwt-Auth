@@ -4,16 +4,13 @@
 
 
 api_login_check:
-    path: /api/login_check
+    path: /api/login
 
 new_register:
     path: /api/register
 
 posts:
-    path: /api/posts
-
-addpost:
-    path: /api/addpost
+    path: /api/post
 
 lists:
     resource  : App\Controller\PostController
